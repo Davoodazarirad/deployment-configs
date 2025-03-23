@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user123-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: user123-app
+  template:
+    metadata:
+      labels:
+        app: user123-app
+    spec:
+      containers:
+      - name: web
+        image: your-dockerhub-user/user123-app:latest
+        ports:
+        - containerPort: 80
