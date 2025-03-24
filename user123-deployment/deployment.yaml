@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: web
-        image: your-dockerhub-user/user123-app:latest
+        image: docker.io/davoodazarirad/test-kaniko-image:latest
         ports:
         - containerPort: 80
